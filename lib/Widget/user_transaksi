@@ -1,0 +1,81 @@
+import 'package:flutter/material.dart';
+
+import 'form_transaksi.dart';
+import 'main_transaksi.dart';
+import 'package:hematkuy/Model/blueprint.dart';
+
+class UserTransaksi extends StatefulWidget {
+  @override
+  _UserTransaksiState createState() => _UserTransaksiState();
+}
+
+class _UserTransaksiState extends State<UserTransaksi> {
+  /* final List<Transaksi> transaksi = [
+    Transaksi(
+      id: 'ghsgda2',
+      judul: 'Makan Seblak',
+      kategori: 'Jajan',
+      nama: 'Fajar Kurniawan',
+      deskripsi: 'Makan',
+      jumlah: 12000,
+      tanggal: sekarang,
+    ),
+    Transaksi(
+      id: 'ghsse',
+      judul: 'Tas Eiger',
+      kategori: 'Peralatan',
+      nama: 'Fajar Kurniawan',
+      deskripsi: 'Kerja',
+      jumlah: 180000,
+      tanggal: sekarang,
+    )
+  ];
+
+  /*void _tambahTransaksiBaru(String txJudul, String txNama, String txKategori,
+      String txDeskripsi, double txJumlah) {
+    //
+    //transaksi objek baru dibawah ini
+    //
+    final dummyTransaksi = Transaksi(
+        id: DateTime.now().toString(),
+        judul: txJudul,
+        kategori: txKategori,
+        nama: txNama,
+        deskripsi: txDeskripsi,
+        jumlah: txJumlah,
+        tanggal: sekarang);
+
+    setState(() {
+      transaksi.add(dummyTransaksi);
+    });
+  }*/
+
+//FUNGSI NAMBAH TRANSAKSI BARU
+  void _tambahTransaksiBaru(
+    String txJudul,
+    String txNama,
+    String txKategori,
+    String txDeskripsi,
+    double txJumlah,
+  ) {
+    final tambahTransaksi = Transaksi(
+        id: DateTime.now().toString(),
+        judul: txJudul,
+        kategori: txKategori,
+        nama: txNama,
+        deskripsi: txDeskripsi,
+        jumlah: txJumlah,
+        tanggal: sekarang);
+
+    setState(() {
+      transaksi.add(tambahTransaksi);
+    });
+  }*/
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [FormTransaksi(_tambahTransaksiBaru), ListTransaksi(transaksi)],
+    );
+  }
+}
