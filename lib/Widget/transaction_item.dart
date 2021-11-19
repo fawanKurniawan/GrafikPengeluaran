@@ -90,7 +90,6 @@ class _ListItemState extends State<ListItem> {
                 style: ButtonStyle(
                     foregroundColor:
                         MaterialStateProperty.all(Theme.of(context).errorColor))
-                //textColor: Theme.of(context).errorColor,
                 )
             : IconButton(
                 padding: const EdgeInsets.only(right: 10),
@@ -99,7 +98,6 @@ class _ListItemState extends State<ListItem> {
                   size: 20,
                 ),
                 color: Theme.of(context).errorColor,
-                //pasing argumen fungsi dengan index id itu mengelink yang ingin dihapus
                 onPressed: () => widget.hapusTransaksi(widget.transaksi.id),
               ),
       ),
