@@ -2,11 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 class FormTransaksi extends StatefulWidget {
-  //
-  // PARAMETER KONSTRUKTOR DARI USERTRANSAKSI
   final tambahTransaksiBaru2;
 
-  //DI KONSTRUKSI DI SINI
   FormTransaksi(this.tambahTransaksiBaru2) {
     print('Constructor FormTransaksi Widget');
   }
@@ -19,8 +16,7 @@ class FormTransaksi extends StatefulWidget {
 }
 
 class _FormTransaksiState extends State<FormTransaksi> {
-  //
-  //Variabel wadah/penerima textfield
+
   final judulController = TextEditingController();
 
   final namaController = TextEditingController();
@@ -40,8 +36,6 @@ class _FormTransaksiState extends State<FormTransaksi> {
     if (jumlahController.text.isEmpty) {
       return;
     }
-    //
-    //inisialisasi named var dari Var Penerima TexField diatas
     final vJudul = judulController.text;
     final vNama = namaController.text;
     final vKategori = kategoriController.text;
@@ -61,8 +55,6 @@ class _FormTransaksiState extends State<FormTransaksi> {
       return;
     }
 
-    //
-    //Store KEMBALI KE USERTRANSAKSI()
     widget.tambahTransaksiBaru2(
       vJudul,
       vNama,
@@ -72,7 +64,6 @@ class _FormTransaksiState extends State<FormTransaksi> {
       vTanggal,
     );
 
-    //untuk menutup laya/page modal secara otomatis
     Navigator.of(context).pop();
   }
 
@@ -83,7 +74,6 @@ class _FormTransaksiState extends State<FormTransaksi> {
       initialDate: DateTime.now(),
       firstDate: DateTime.now().subtract(Duration(days: 6)),
       lastDate: DateTime.now(),
-      //then (kemudian) diisi parameter value yaitu karna disini datepicker mengembalikan return Future, jadi diisi dengan .then()
     ).then((value) {
       if (value == null) {
         return;
