@@ -13,7 +13,8 @@ class _UserTransaksiState extends State<UserTransaksi> {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [FormTransaksi(_tambahTransaksiBaru), ListTransaksi(transaksi)],
+      children: [FormTransaksi(_tambahTransaksiBaru), ListTransaksi(transaksi),
+      ],
     );
   }
 }
