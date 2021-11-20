@@ -35,7 +35,6 @@ class ChartBar extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                   ),
                 ),
-                //apa itu kegunaan fractionallysizedbox?? (belom searching)
                 FractionallySizedBox(
                   child: Container(
                     decoration: BoxDecoration(
