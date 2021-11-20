@@ -111,7 +111,6 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
   //
   //get data dari _transaksi dan difilter berdasarkan hari per 7 hari
   List<Transaksi> get _recentTransaksi {
-    // parameter list _transaksi dibagi menjadi per 7 hari
     return _transaksi.where((tx) {
       return tx.tanggal.isAfter(
         DateTime.now().subtract(
@@ -203,25 +202,6 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
   bool _showChartView = false;
 
   @override
-  void initState() {
-    WidgetsBinding.instance.addObserver(this);
-    // TODO: implement initState
-    super.initState();
-  }
-
-  @override
-  void didChangeAppLifecycleState(AppLifecycleState state) {
-    print(state);
-  }
-
-  @override
-  void dispose() {
-    WidgetsBinding.instance.removeObserver(this);
-    // TODO: implement dispose
-    super.dispose();
-  }
-
-  @override
   Widget build(BuildContext context) {
     print('Class MyHomePage()');
     final mediaQuery = MediaQuery.of(context);
@@ -272,8 +252,6 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
           ],
         ),
       ),
-
-      //
 
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton(
