@@ -5,16 +5,9 @@ import 'package:hematkuy/Widget/chart.dart';
 import 'package:hematkuy/Widget/form_transaksi.dart';
 import 'package:hematkuy/Widget/main_transaksi.dart';
 
-//var sekarang = DateFormat('EEEE, d MMMM y, H:m').format(new DateTime.now());
 
 void main() {
-  //Bila ingin menonaktifkan mode landscape, maka dengan menambahkan method SystemChrome.SetPreferredOrientations dan diisi dengan construkctor  DeviceOrientation.potraitUp dan DeviceOrientation.potraitDown.
-  //Sekarang satu catatan penting pada versi terbaru dari flutter. Anda perlu menambahkan WidgetsFlutterBinding.ensureInitialized() diatas method systemchrome
-  /* WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp,
-    DeviceOrientation.portraitDown,
-  ]); */
+
   runApp(MyApp());
 }
 
@@ -25,15 +18,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-          // This is the theme of your application.
-          //
-          // Try running your application with "flutter run". You'll see the
-          // application has a blue toolbar. Then, without quitting the app, try
-          // changing the primarySwatch below to Colors.green and then invoke
-          // "hot reload" (press "r" in the console where you ran "flutter run",
-          // or simply save your changes to "hot reload" in a Flutter IDE).
-          // Notice that the counter didn't reset back to zero; the application
-          // is not restarted.
           primarySwatch: Colors.blue,
           backgroundColor: Colors.grey.shade50,
           errorColor: Colors.red,
@@ -138,12 +122,10 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
     }).toList();
   }
 
-  //
-  //method untuk store ke model
+  
   void _tambahTransaksiBaru(String txJudul, String txNama, String txKategori,
       String txDeskripsi, double txJumlah, DateTime txTanggal) {
-    //
-    //Store ke model Transaksi
+  
     final tambahTransaksi = Transaksi(
         id: DateTime.now().toString(),
         judul: txJudul,
@@ -205,14 +187,6 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
         });
   }
 
-  /* void _modalSatu(BuildContext ctx) {
-    showModalBottomSheet(
-        context: ctx,
-        builder: (sada) {
-          return FormTransaksi(_tambahTransaksiBaru);
-        });
-  } */
-
   List<Widget> _buildLandscape(
       MediaQueryData mediaQuery, AppBar appBar, Widget txListTransaksi) {
     return [
@@ -231,8 +205,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
       ),
       _showChartView
           ? Container(
-              //perhitungan untuk me responsive kan suatu page dengan perhitungan, statusbar, appBar, dan widgetnya itu sendiri
-              height: (mediaQuery.size.height -
+                      height: (mediaQuery.size.height -
                       appBar.preferredSize.height -
                       mediaQuery.padding.top) *
                   0.7,
@@ -248,8 +221,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
   ) {
     return [
       Container(
-          //perhitungan untuk me responsive kan suatu page dengan perhitungan, statusbar, appBar, dan widgetnya itu sendiri
-          height: (mediaQuery.size.height -
+        height: (mediaQuery.size.height -
                   appBar.preferredSize.height -
                   mediaQuery.padding.top) *
               0.3,
@@ -268,8 +240,6 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
   }
 
   @override
-  //Jadi metode ini akan dipanggil setiap kali siklus hidup Anda berubah,
-  //setiap kali aplikasi mencapai keadaan baru dalam siklus hidup
   void didChangeAppLifecycleState(AppLifecycleState state) {
     print(state);
   }
@@ -312,8 +282,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
     );
 
     final txListTransaksi = Container(
-        //perhitungan untuk me responsive kan suatu page dengan perhitungan, statusbar, appBar, dan widgetnya itu sendiri
-        height: (mediaQuery.size.height -
+       height: (mediaQuery.size.height -
                 appBar.preferredSize.height -
                 mediaQuery.padding.top) *
             0.7,
@@ -326,30 +295,10 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            //Pengkondisian Mode Landscape or Potrait, dan menggunakan scatter operator untuk mendefinisikan method tersebut berupa list
-            //landscape kondisi
-            if (isLandscape)
+           if (isLandscape)
               ..._buildLandscape(mediaQuery, appBar, txListTransaksi),
-            //Potrait kondisi
-            if (!isLandscape)
+           if (!isLandscape)
               ..._buildPotrait(mediaQuery, appBar, txListTransaksi),
-
-            /* Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                width: 200,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    TextField(),
-                    TextField(),
-                  ],
-                ),
-              )
-            ],
-          ),*/
           ],
         ),
       ),
