@@ -12,7 +12,6 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -134,11 +133,8 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
         deskripsi: txDeskripsi,
         jumlah: txJumlah,
         tanggal: txTanggal);
-
-    //
-    //Finishing store ke var transaksi
-    setState(() {
-      //transaksi.add(tambahTransaksi);
+   
+    setState(() { 
       _transaksi.add(tambahTransaksi);
     });
   }
@@ -148,33 +144,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
       return _transaksi.removeWhere((element) => element.id == id);
     });
   }
-/* void _hapusTransaksiBaru(
-    String txJudul,
-    String txNama,
-    String txKategori,
-    String txDeskripsi,
-    double txJumlah,
-  ) {
-    //
-    //Store ke model Transaksi
-    final tambahTransaksi = Transaksi(
-        id: DateTime.now().toString(),
-        judul: txJudul,
-        kategori: txKategori,
-        nama: txNama,
-        deskripsi: txDeskripsi,
-        jumlah: txJumlah,
-        tanggal: DateTime.now());
 
-    //
-    //Finishing store ke var transaksi
-    setState(() {
-      //transaksi.add(tambahTransaksi);
-      _transaksi.remove(tambahTransaksi);
-    });
-  } */
-
-  //Kalo membuat sebuah contex atau item build halaman, maka membutuhkan (BuildContext)
   void _modalHomepage(BuildContext aCtx) {
     showModalBottomSheet(
         context: aCtx,
