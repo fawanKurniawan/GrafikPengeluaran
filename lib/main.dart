@@ -41,7 +41,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
   final List<Transaksi> _transaksi = [
     Transaksi(
-        id: 'ghsgda2',
+        id: 'sadaxasa',
         judul: 'Makan Seblakfdsfdsdd fsbrsbsdfsb s fsfsbs',
         kategori: 'Jajan',
         nama: 'Fajar Kurniawan',
@@ -57,7 +57,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
         jumlah: 42000.0,
         tanggal: DateTime.utc(2021, 3, 22, 15, 0, 00, 0)),
     Transaksi(
-        id: 'ghsgda2',
+        id: 'cadadwaas',
         judul: 'Makan Seblak',
         kategori: 'Jajan',
         nama: 'Fajar Kurniawan',
@@ -65,7 +65,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
         jumlah: 62000.0,
         tanggal: DateTime.utc(2021, 3, 27, 13, 0, 00, 0)),
     Transaksi(
-        id: 'ghsgda2',
+        id: 'aacacds',
         judul: 'Makan Seblak',
         kategori: 'Jajan',
         nama: 'Fajar Kurniawan',
@@ -73,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
         jumlah: 12000.0,
         tanggal: DateTime.utc(2021, 3, 21, 13, 0, 00, 0)),
     Transaksi(
-        id: 'ghsgda2',
+        id: 'svfsvfsdv',
         judul: 'Makan Seblak',
         kategori: 'Jajan',
         nama: 'Fajar Kurniawan',
@@ -81,7 +81,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
         jumlah: 17000.0,
         tanggal: DateTime.utc(2021, 3, 25, 13, 0, 00, 0)),
     Transaksi(
-        id: 'ghsgda2',
+        id: 'bddfgf',
         judul: 'Makan Seblak',
         kategori: 'Jajan',
         nama: 'Fajar Kurniawan',
@@ -89,7 +89,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
         jumlah: 120090.0,
         tanggal: DateTime.utc(2021, 3, 24, 13, 0, 00, 0)),
     Transaksi(
-      id: 'ghsgda2',
+      id: 'scsfscfs',
       judul: 'Makan Seblak',
       kategori: 'Jajan',
       nama: 'Fajar Kurniawan',
@@ -98,7 +98,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
       tanggal: DateTime.utc(2021, 3, 23, 13, 0, 00, 0),
     ),
     Transaksi(
-      id: 'ghsse',
+      id: 'bsbfssdfesf',
       judul: 'Tas Eiger',
       kategori: 'Peralatan',
       nama: 'Fajar Kurniawan',
